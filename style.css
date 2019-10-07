@@ -1,0 +1,492 @@
+/*   
+Theme Name: KESPA
+Theme URI: 
+Description: KESPA custom WordPress Theme template -- WordPress Version 5.1.1
+Author: Elmira Kirakosyan
+Author URI: 
+Version: 1
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.marginTop0{
+    margin-top: 0 !important;
+}
+.marginT15{
+    margin-top: 15px !important;
+}
+.mR50{
+    margin-right: 50px !important;
+}
+.padd0{
+    padding: 0;
+}
+.padd20{
+    padding: 20px;
+}
+.paddTop20{
+    padding-top: 20px;
+}
+.paddTB20{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.paddR50{
+    padding-right: 50px;
+}
+.paddL50{
+    padding-left: 50px;
+}
+.paddRight0{
+    padding-right: 0;
+}
+.paddLeft0{
+    padding-left: 0;
+}
+.marginB20{
+    margin-bottom: 20px;
+}
+.marginB30{
+    margin-bottom: 30px;
+}
+.marginB40{
+    margin-bottom: 40px;
+}
+.marginB50{
+    margin-bottom: 50px;
+}
+.bgGrey{
+    background: #ebebeb;
+}
+.bgMediaSection{
+    background: #00000085;
+}
+.bgMediaSection1 {
+    background: rgba(0, 0, 0, 0.70);
+}
+.theSpaceSection{
+    color: #fff;
+}
+.theSpaceSection h5{
+    text-align: center;
+    font-size: 35px;
+    padding-top: 20px;
+}
+.theSpaceSection h5,
+.theSpaceSection h5 a{
+    text-align: center;
+    color: #d7d7d7;
+}
+.theSpaceSection h5 a{
+    border-bottom: 1px solid;
+}
+.theSpaceSection a.toggleContent{
+    color: #bfcbfa;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-bottom: 1px solid;
+}
+.ct-coursesBox .ct-coursesBox-image .ct-coursesIcon{
+    width: 100px;
+}
+.ct-photoGallery .nav {
+    max-width: 280px;
+}
+.btnSupportBig{
+    width: 100%;
+    font-size: 18px;
+    padding: 7px;
+    margin-top: 20px;
+}
+.supportBottonBlock{
+    
+}
+.ct-blogPost .ct-blogPost-title{
+    font-size: 26px;
+}
+.ct-sectionTitle{
+    font-size: 30px;
+}
+.post-edit-link{
+    margin-top: 12px;
+    display: inline-block;
+    background: #c51823;
+    padding: 5px 10px;
+    color: #fff;
+}
+footer .copyright{
+    text-transform: capitalize;
+}
+.text-bold{
+    font-weight: bold;
+}
+.autoHeight{
+    height: auto!important;
+}
+.donateTopTxt{
+    font-size: 32px;
+    line-height: 35px;
+    height: 35px;
+    padding-right: 20px;
+    font-weight: 600;
+    border-right: solid 1px #000;
+    clear: none;
+    text-transform: uppercase;
+}
+.clickToSupport{
+    padding-left: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    clear: none;
+    margin-top: 15px;
+}
+
+.navbarLogoTxt1{
+    font-size: 30px;
+    line-height: 26px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    text-align: center;
+}
+.navbarLogoTxt1 span{
+    font-weight: 600;
+}
+.navbarLogoTxt2{
+    font-size: 23px;
+    line-height: 1;
+    text-align: center;
+}
+.site-header-menu li.current-menu-item a, 
+.site-header-menu li a:hover {
+    border-bottom: solid 4px #000;
+    padding-bottom: 5px;
+}
+.site-header-menu li {
+    float: left;
+    margin-left: 30px;
+}
+.site-header-menu li > a{
+    padding: 0;
+    margin: 0;
+}
+.ct-pageWrapper h3{
+    color: #000;
+    font-size: 27px;
+}
+
+/*Pagination styles Start*/
+.wp-paginate{
+    text-align: right;
+    margin: 60px 0;
+    display: inline-block;
+    width: 100%;
+}
+.wp-paginate .inner-block{
+    display: inline-block;
+    float: right;
+}
+.wp-paginate .page-numbers{
+    font-size: 17px;
+    color: #a2a2a2;
+    text-decoration: none;
+    margin-right: 10px;
+    float: left;
+}
+.wp-paginate .page-numbers.current{
+    color: #ebbd00;
+}
+.wp-paginate .page-numbers.next{
+    display: inline-block;
+    background: url(images/arrow-right.png) 0 0 no-repeat;
+    font-size: 0;
+    width: 21px;
+    height: 20px;
+    background-position: 50%;
+}
+.wp-paginate .page-numbers.prev{
+    display: inline-block;
+    background: url(images/arrow-left.png) 0 0 no-repeat;
+    font-size: 0;
+    width: 21px;
+    height: 20px;
+    background-position: 50%;
+}
+/*Pagination styles END*/
+
+.ballet2021Section h4{
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+.sectionBaletContent{
+    padding: 0 20px;
+    line-height: 1.5em;
+}
+.sectionBaletContent h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+.sectionBaletContent .toggleContent{
+    float: right;
+    color: #7a7a7a;
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.doubleVideo .ct-video-poster {
+    max-width: 100%;
+}
+.bgBlue{
+    background: rgba(22, 53, 134, 0.5686274509803921);
+}
+.join-title{
+    color: #fff!important;
+}
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 15px 20px;
+    width: auto;
+    max-width: 600px;
+    margin: 50px auto;
+    border: 2px solid #233156;
+    box-shadow: 0 5px 15px rgba(210, 180, 180, 0.5);
+    border-radius: 8px;
+  }
+  
+.white-popup .title{
+    margin: 0;
+    font-size: 22px;
+    line-height: 1;
+}
+.white-popup .panel-title{
+    font-size: 16px;
+    margin: 0;
+}
+.white-popup .thankyou-title{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+.white-popup .personalinfo-title{
+    font-size: 18px;
+    border-bottom: 1px solid #999;
+}
+.white-popup input{
+    border: 1px solid #cccccc !important;
+    color: #000;
+}
+.white-popup .submit-btn{
+    width: 100%;
+    background: #2c4b9c;
+    border: 2px solid #2c4b9c;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.white-popup .submit-btn:hover{
+    background: none;
+    color: #2c4b9c;
+}
+.white-popup .form-group {
+    margin-bottom: 5px;
+}
+.bgSupport{
+    background-position-y: bottom;
+}
+.donate-today{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    color: white;
+    opacity: 0.9;
+}
+.donate-today h2 {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+.donate-today ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.donate-today .donation-amount {
+    width: 42%;
+    position: relative;
+    margin: 12px 4%;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.donate-today .donation-amount.w100p {
+    width: 100%;
+}
+
+.donate-today .btn-donate-amount {
+    width: 100%;
+    padding: 10px 0;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #fff;
+}
+.contributationAmount{
+    font-weight: bold;
+}
+.btn-donate-amount:hover {
+    background: white;
+    color: #000;
+}
+.footer-bordered{
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+.footer-contact{
+    padding-bottom: 20px;
+}
+.footer-contact,
+.footer-contact  a,
+.footer-contact p {
+    font-size: 20px;
+    line-height: 26px;
+    
+}
+.footer-contact h5{
+    font-size: 19px;
+    margin: 0;
+    color: #585757;
+    color: #333333;
+}
+.footer-contact .copyright{
+    font-size: 12px;
+}
+.footer-contact .footerRow{
+    margin: 20px 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.footer-contact div.social a {
+    background: #000;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 16px;
+    padding-top: 6px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.innerPageBG{
+    min-height: 520px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.nesTemplate .toggleContent{
+    margin-top: 15px;
+    display: inline-block;
+    float: right;
+}
+.supportersSecondSection{
+    padding: 60px 20px;
+}
+.supportFooter .content{
+   
+}
+.supportFooter .title{
+    border-bottom: 1px solid #d4d4d4;
+    font-size: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.supportContacts .infoText{}
+
+.supportFooter .email{
+    margin-bottom: 20px;
+}
+.supportFooter a{
+    color: #0c4da2;
+    
+}
+.team .ct-blogTitle{
+    line-height: 1;
+    margin-bottom: 5px;
+}
+.team .position{
+    font-size: 15px;
+        margin-bottom: 15px;
+    color: #8e8e8e;
+}
+.team .ct-pageWrapper h3 {
+    color: #000;
+    font-size: 20px;
+}
+
+.footerLogoSection .textBlock{
+    padding: 60px 150px 30px 150px;
+    text-align: center;
+}
+.links-blue a{
+    color: #0072ff;
+    text-decoration: underline;
+}
+.pdf-borderd-box{
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    margin-top: 10px;
+    padding: 5px 15px;
+}
+.ct-video-poster  img{
+    width: 100%;
+}
+
+@media screen and (min-width: 768px){
+    .footer-contact div.social a {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        font-size: 22px;
+        padding-top: 9px;
+    }
+}
+div.ct-u-size16, div.ct-u-size16 p{
+    font-size: 16px!important;
+    line-height: 1.875em!important;
+}
+.aboutSection5 p{
+    line-height: 1.5em!important;
+}
+
+.wpml-ls-menu-item{
+    margin-left: 10px !important;
+}
+.wpml-ls-item-en{
+    margin-left: 20px !important;
+}
+.wpml-ls-menu-item a:hover{
+    border-bottom: 0 !important;
+}
+
+.footer-logoes img{
+    max-height: 42px;
+    margin-right: 15px;
+}
+
+.footer-logoes ul{
+    list-style-type: none;
+    padding: 0;
+}
+.footer-logoes ul li{
+    display: inline-block;
+}

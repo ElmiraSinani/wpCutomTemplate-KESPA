@@ -1,0 +1,92 @@
+.form-control{
+  color: @input-color;
+  background-color: @input-bg;
+  font-size: 15px;
+  padding: 0 15px;
+  font-weight: 200;
+  .ct-m-bordered(@top-color: #ededed,@right-color: #ededed,@bottom-color: #ededed,@left-color: #ededed);
+  .ct-m-borderRadius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0);
+  .ct-m-dropShadow(@x-axis: 0, @y-axis: 0, @blur: 0, @alpha: 0);
+  .ct-m-transition(@type: all, @duration:0.30s, @ease:ease-out);
+  &:focus, &:active {
+    .ct-m-dropShadow(@x-axis: 0, @y-axis: 0, @blur: 0, @alpha: 0);
+  }
+}
+.form-control::-moz-placeholder {
+  color: @input-color-placeholder;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: @input-color-placeholder;
+}
+.form-control::-webkit-input-placeholder {
+  color: @input-color-placeholder;
+}
+
+// Login form styling
+.ct-loginForm{
+  .form-control::-moz-placeholder {
+    color: @input-color-placeholder-darker;
+    opacity: 1;
+  }
+  .form-control:-ms-input-placeholder {
+    color: @input-color-placeholder-darker;
+  }
+  .form-control::-webkit-input-placeholder {
+    color: @input-color-placeholder-darker;
+  }
+  .form-control{
+    padding: 0 18px;
+    font-size: 14px;
+    .ct-m-bordered(@top-color: #ededed, @right-color: #ededed, @bottom-color: #ededed, @left-color: #ededed);
+    &:focus, &:active {
+      .ct-m-bordered(@top-color: @brand-primary, @right-color: @brand-primary, @bottom-color: @brand-primary, @left-color: @brand-primary);
+      .ct-m-dropShadow(@x-axis: 0, @y-axis: 0, @blur: 0, @alpha: 0);
+    }
+  }
+}
+html.ie8{
+  .ct-loginForm{
+    .form-control{
+      line-height: 35px; // IE8 support
+    }
+  }
+}
+.form-group{
+  label{
+    font-size: 15px;
+    color: @gray-base;
+    font-weight: 400;
+    text-align:left;
+    &.control-label{
+      @media (min-width: @screen-sm){
+        text-align: left;
+//        margin-bottom: 0;
+        padding-top: 7px;
+      }
+    }
+  }
+  .input-inline{
+    display: inline-block;
+    width: auto;
+  }
+}
+.form-horizontal{
+  .form-group{
+    margin-left:0;
+    margin-right: 0;
+  }
+}
+
+textarea{
+  &.form-control{
+    padding: 10px 15px;
+  }
+}
+
+
+html.ie8{
+  input.form-control{
+    line-height: 37px; // IE8 support
+  }
+}

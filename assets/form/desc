@@ -1,0 +1,3 @@
+Add external to this folder:
+
+svn+ssh://createit.pl/svn/themeforest/branches/ct/contact_form/vendor vendor

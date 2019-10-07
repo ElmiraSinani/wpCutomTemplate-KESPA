@@ -1,0 +1,772 @@
+// Onepager // ---------------------------------------------------------------------------------------------------------
+.navbar-nav{
+  li.active{
+    a{
+      color: @motive;
+    }
+  }
+}
+
+// Your code
+body.ct-navbar--staticTop .navbar{
+  position:static;
+}
+// Main Menu Style // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.ct-navbar--top{
+  padding-top: 114px;
+  .navbar{
+    position: absolute;
+    top: 0;
+    background-color: @navbar-default-bg;
+  }
+  @media (max-width: @screen-sm){
+    padding-top:0;
+  }
+}
+
+@media only screen and (min-width : 768px) {
+  /* Make Navigation Toggle on Desktop Hover */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+.ct-navbar{
+  z-index:1;
+}
+
+.navbar{
+  position:absolute;
+  border:none;
+  z-index:1;
+  min-height:72px;
+  margin-bottom:0;
+  left:0;
+  right:0;
+  width:100%;
+  .container-fluid{
+    position: relative;
+  }
+}
+.navbar{
+  @media (max-width:767px){
+    display:none;
+  }
+}
+.navbar-nav > li > a{
+  color:#000000;
+  @media (max-width: @screen-md){
+    font-size: 14px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+}
+.navbar.yamm{
+
+  li.dropdown{
+    position: static;
+    &:hover{
+      > a{
+        &:after{
+          content:'';
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          left: 0;
+        }
+      }
+    }
+    ul.dropdown-menu{
+      box-shadow:none;
+      border:none;
+      border-radius:0;
+      min-width: 210px;
+      padding: 10px 25px;;
+      background-color: #f3f3f3;
+      top: 145%;
+      left: auto;
+      right: auto;
+      li{
+        position: relative;
+        z-index: 10;
+        border-bottom: 1px solid #e4e4e4;
+        border-top: 1px solid #fff;
+        a{
+          display: block;
+          position: relative;
+          width: 100%;
+          padding: 1em 0;
+          text-decoration: none;
+          box-sizing: border-box;
+          color:inherit;
+          text-transform: capitalize;
+          &:hover{
+            color: @motive;
+            background-color: transparent;
+          }
+        }
+        &:first-child{
+          border-top:0;
+          ul.dropdown-menu{
+            margin-top: -10px;
+            padding-top: 10px;
+          }
+        }
+        &:last-child{
+          border-bottom:0;
+        }
+      }
+      .dropdown-submenu{
+        &:before{
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 31px;
+          display: block;
+          left: -30px;
+        }
+        .dropdown-menu{
+          position: absolute;
+          right: 100%;
+          top: 0;
+          display: none;
+          margin-top: 0;
+          padding-top:0;
+          background-color: #f3f3f3;
+          margin-right: 30px;
+          padding-bottom: 0;
+        }
+        &:hover{
+          .dropdown-menu{
+            display: inherit;
+          }
+        }
+      }
+    }
+  }
+}
+.navbar.yamm.navbar-scroll-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left:0;
+  z-index: 999;
+  color:inherit;
+  background-color:@navbar-default-bg;
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, .3);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, .3);
+  border-bottom: 1px solid @white-base;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.yamm.dropdown-menu{
+  padding-bottom:0;
+  border-radius:0;
+}
+.navbar.yamm{
+  .dropdown.yamm-fw{
+    left: 0;
+    right: 0;
+    .dropdown-menu{
+      left: 0;
+      right: 0;
+      li{
+        .yamm-content{
+          ul{
+            li{
+              &:last-child{
+                border-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.yamm-content {
+  text-align: left;
+  font-weight: 400;
+}
+.navbar-nav > li > .dropdown-menu{
+  right:0;
+}
+/*headroom styles for fixed headers and menus*/
+.animatedHeadroom {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.headroom {
+  transition: transform 200ms linear;
+  z-index: 9998;
+}
+.headroom--pinned {
+  transform: translateY(0%);
+  display: block;
+  transition: linear 5s;
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
+  display: none;
+}
+.navbar.yamm{
+  min-height: 0;
+  padding: 15px 25px;
+  border-radius:0;
+  @media(max-width: 992px){
+    padding: 24px 25px;
+  }
+  .navbar-brand{
+    height:auto;
+  }
+  .navbar-right{
+    padding-top:15px;
+  }
+  .nav{
+    > li{
+      > a{
+        position: relative;
+        &:hover, &:focus{
+          background-color:transparent;
+        }
+        &:before{
+          position: absolute;
+          vertical-align: middle;
+          font-size: 13px;
+          content: "/";
+          left: 0;
+          color:#303030;
+        }
+      }
+      &:first-child{
+        a{
+          &:before{
+            content:'';
+          }
+        }
+      }
+    }
+  }
+}
+// Mobile Menu Style // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.snapjs-right{
+  overflow: hidden !important;
+  height: 100%;
+  .ct-navbarMobile{
+    .navbar-toggle{
+      .icon-bar{
+        margin-top: -2px;
+        &:nth-child(4){
+          display:none;
+        }
+        &:nth-child(2){
+          transform: rotate(-45deg);
+        }
+        &:nth-child(3){
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+.ct-navbar--fixedTop{
+  .ct-navbarMobile{
+    position: fixed;
+  }
+}
+
+.ct-navbarMobile{
+  position: absolute;
+  .ct-m-transition(all, 0.2s, ease);
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: @z-index-9;
+  &.ct-navbarMobile--inverse {
+    background-color: @navbar-inverse-bg;
+    color: #ffffff;
+  }
+  .navbar-brand{
+    height: 70px;
+    padding: 0 15px;
+    line-height: 70px;
+    float: none;
+    > img{
+      padding: 6px 0;
+      display: inline;
+      max-height: 50px;
+    }
+  }
+  .navbar-toggle{
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    z-index: 9999;
+    .icon-bar{
+      background-color: @navbar-inverse-toggle-icon-bar-bg;
+    }
+  }
+}
+
+.snapjs-right, .snapjs-left{
+  .ct-menuMobile{
+    overflow: scroll;
+  }
+}
+
+
+
+.ct-menuMobile{
+  background: @brand-primary;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 266px;
+  max-height: 100%;
+  overflow: hidden;
+  .ct-menuMobile-navbar{
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+    margin-left: 0;
+    li{
+      padding-left: 0;
+      margin-left: 30px;
+      border-bottom: 1px solid #e3b1c7;
+      border-top: 1px solid #f5cbde;
+      &:first-child{
+        border-top: none;
+      }
+      &:last-child{
+        border-bottom: none;
+      }
+     a{
+       color: @white-base;
+       padding: 10px 20px 10px 0;
+       display: block;
+       position: relative;
+       text-transform: uppercase;
+       font-weight: 500;
+        &:focus, &:active{
+          outline: none !important;
+          transition: none;
+        }
+        i{
+          float: right;
+          font-size: 13px;
+          line-height: 20px;
+        }
+      }
+    }
+    .dropdown-menu{
+      .ct-m-rounded(@radius: 0);
+      background-color: transparent;
+      position: relative;
+      display: block;
+      max-height: 0;
+      padding: 0;
+      box-shadow: none;
+      -webkit-box-shadow:none;
+      .ct-m-transition(all 0.2s ease);
+      overflow: hidden;
+      border: none;
+      width: 100%;
+      left: 0;
+      li{
+        padding-left: 0;
+        margin-left: 0;
+        a{
+          background-color: transparent;
+          font-weight:400;
+        }
+      }
+      &.ct-featuresMobile{
+        i{
+          float:none;
+        }
+      }
+    }
+    .open{
+      .dropdown-menu{
+        padding: 0;
+        max-height: none;
+        padding-left: 15px;
+      }
+    }
+  }
+  li.dropdown,
+  li{
+    &.dropdown{
+      > a{
+        position: relative;
+        &:before{
+          content: '\f067';
+          font-family: FontAwesome;
+          font-style: normal;
+          font-weight: normal;
+          text-decoration: inherit;
+          color: @motive;
+          position: absolute;
+          right: 20px;
+          height: 17px;
+          width: 17px;
+          line-height: 1.6em;
+          font-size: 10px;
+          border: 1px solid @white-base;
+          background-color: @white-base;
+          text-align: center;
+          top: 50%;
+          transform: translate(0,-50%);
+          -webkit-transform: translate(0,-50%);
+        }
+      }
+      &.open{
+        > a{
+          transition: none;
+          -webkit-transition: none;
+          background-color: #ffd4e7;
+          &:before{
+            content: '\f068';
+          }
+          &:after{
+            content: "";
+            background-color: #ffd4e7;
+            height: 100%;
+            width: 9999px;
+            right: 100%;
+            position: absolute;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+  .dropdown-menu{
+    .dropdown-submenu{
+      > a {
+        position: relative;
+        &:before {
+          content: '\f067';
+          font-family: FontAwesome;
+          font-style: normal;
+          font-weight: normal;
+          text-decoration: inherit;
+          color: @motive;
+          position: absolute;
+          right: 20px;
+          height: 17px;
+          width: 17px;
+          line-height: 1.6em;
+          font-size: 10px;
+          border: 1px solid @white-base;
+          background-color: @white-base;
+          text-align: center;
+          top: 50%;
+          transform: translate(0, -50%);
+          -webkit-transform: translate(0, -50%);
+        }
+      }
+      .dropdown-menu{
+        .ct-m-rounded(@radius: 0);
+        background-color: transparent;
+        position: relative;
+        display: block;
+        max-height: 0;
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+        -webkit-box-shadow:none;
+        .ct-m-transition(all 0.2s ease);
+        overflow: hidden;
+        border: none;
+        width: 100%;
+        left: 0;
+        li{
+          a{
+            font-weight: 300;
+            background-color: transparent;
+          }
+        }
+
+      }
+      &.open{
+        .dropdown-menu{
+          padding: 0;
+          max-height: none;
+          margin: 0;
+          li{
+            margin-left: 15px;
+            &:last-child{
+              border-bottom: 1px solid #e3b1c7;
+            }
+          }
+        }
+      }
+      &.open{
+        > a{
+          transition: none;
+          -webkit-transition: none;
+          background-color: #ffd4e7;
+          &:before{
+            content: '\f068';
+          }
+          &:after{
+            content: "";
+            background-color: #ffd4e7;
+            height: 100%;
+            width: 9999px;
+            right: 100%;
+            position: absolute;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .ct-navbarMobile, .ct-menuMobile{
+    display: none;
+  }
+}
+.navbar-default span{
+    color:#edc0d4;
+}
+
+@media (max-width: 992px){
+  .navbar-nav{
+    float: none!important;
+    display: table;
+    margin: 0 auto;
+  }
+}
+// Onepager ------------------------------------------------------------------------------------------------------------
+
+@media (max-width: @screen-lg-desktop){
+  .onepager{
+    .nav{
+      > li{
+        > a{
+          padding-left: 8px;
+          padding-right: 6px;
+          font-size: 13px;
+          &:before{
+            font-size: 9px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: @screen-md){
+  .onepager {
+    .navbar-nav{
+      float: none;
+      display: table;
+      margin: 0 auto;
+    }
+    .navbar-brand{
+      padding-bottom: 0;
+    }
+    .navbar.yamm {
+      .navbar-right {
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+// Dropdowns Animation Styles // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.ct-navbar--bounceIn{
+  > li.dropdown:hover{
+    .dropdown-menu{
+      -webkit-animation-name: bounceIn;
+      animation-name: bounceIn;
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+}
+.ct-navbar--fadeIn{
+  > li.dropdown:hover{
+    .dropdown-menu{
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+}
+.ct-navbar--fadeInLeft{
+  > li.dropdown:hover{
+    .dropdown-menu{
+      -webkit-animation-name: fadeInLeft;
+      animation-name: fadeInLeft;
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+}
+.ct-navbar--fadeInRight{
+  > li.dropdown:hover{
+    .dropdown-menu{
+      -webkit-animation-name: fadeInRight;
+      animation-name: fadeInRight;
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+}
+.ct-navbar--fadeInDown{
+  > li.dropdown:hover{
+    .dropdown-menu{
+      -webkit-animation-name: fadeInDown;
+      animation-name: fadeInDown;
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+}
+.ct-navbar--fadeInUp{
+  > li.dropdown:hover{
+    .dropdown-menu{
+      -webkit-animation-name: fadeInUp;
+      animation-name: fadeInUp;
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+}
+.ct-navbar--pulse {
+  > li.dropdown:hover {
+    .dropdown-menu {
+      -webkit-animation-name: pulse;
+      animation-name: pulse;
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+}
+
+.ct-navbar--bounceInRight{
+  > li.dropdown:hover{
+    .dropdown-menu{
+      -webkit-animation-name: bounceInRight;
+      animation-name: bounceInRight;
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+}
+.ct-navbar--bounceInLeft{
+  > li.dropdown:hover{
+    .dropdown-menu{
+      -webkit-animation-name: bounceInLeft;
+      animation-name: bounceInLeft;
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+}
+.ct-navbar--flipInX{
+  > li.dropdown:hover{
+    .dropdown-menu{
+      -webkit-animation-name: flipInX;
+      animation-name: flipInX;
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+}
+.ct-navbar--flipInY{
+  > li.dropdown:hover{
+    .dropdown-menu{
+      -webkit-animation-name: flipInY;
+      animation-name: flipInY;
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+}
+.ct-navbar--zoomIn{
+  > li.dropdown:hover{
+    .dropdown-menu{
+      -webkit-animation-name: zoomIn;
+      animation-name: zoomIn;
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+}
+.ct-navbar--zoomInDown{
+  > li.dropdown:hover{
+    .dropdown-menu{
+      -webkit-animation-name: zoomInDown;
+              animation-name: zoomInDown;
+      -webkit-animation-duration: .5s;
+              animation-duration: .5s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+    }
+  }
+}
+.ct-navbar--zoomInUp{
+  > li.dropdown:hover{
+    .dropdown-menu{
+      -webkit-animation-name: zoomInUp;
+              animation-name: zoomInUp;
+      -webkit-animation-duration: .5s;
+              animation-duration: .5s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+    }
+  }
+}
+
+.navbar{
+  &.fadeOutUp{
+    .navbar-nav{
+      li.dropdown{
+        ul.dropdown-menu{
+          pointer-events: none;
+          li.dropdown-submenu{
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+}

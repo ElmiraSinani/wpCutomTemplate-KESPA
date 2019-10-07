@@ -1,0 +1,183 @@
+// Buttons // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+button, button:hover, button:focus, button:active{
+  outline: none !important;
+}
+
+// Default Style // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.btn{
+  padding: 18px 30px;
+  font-size: 16px;
+}
+
+.btn-lg{
+  min-width: 200px;
+  padding: 21px 30px;
+  font-size: 18px;
+}
+
+.btn-sm{
+  padding: 12px 17px;
+}
+
+.btn-xs{
+  padding: 8px 15px;
+  font-size: 13px;
+}
+
+.btn-primary,
+.btn-success,
+.btn-danger,
+.btn-warning,
+.btn-info,
+.btn-gray,
+.btn-darkGray{
+  position:relative;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  &:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  &:hover{
+    &:before{
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+    }
+  }
+}
+
+.btn-success{
+  &:before{
+    background: @btn-success-bg;
+  }
+}
+.btn-danger{
+  &:before{
+    background: @btn-danger-bg;
+  }
+}
+.btn-warning{
+  &:before{
+    background: @btn-warning-bg;
+  }
+}
+.btn-info{
+  &:before{
+    background: @btn-info-bg;
+  }
+}
+.btn-gray{
+  color: @btn-gray-color;
+  background-color: #d1d1d1;
+  &:before{
+    background: @btn-gray-bg;
+  }
+}
+.btn-darkGray{
+  color: @btn-darkGray-color;
+  background: #000000;
+  &:before{
+    color: @btn-darkGray-color;
+    background: @btn-darkGray-bg;
+  }
+  &:hover, &:focus, &:active{
+    color: @btn-darkGray-color;
+  }
+}
+
+.btn-default, .btn-default:disabled{
+  background-color: transparent;
+  border-color: #cccccc;
+  &:hover, &:active, &:focus{
+    color: darkred;
+  }
+}
+.btn-primary--submit{
+  border-radius:0;
+}
+.btn{
+  font-family: "Ubuntu";
+  -webkit-transition: all 0.8s ease 0s;
+  -moz-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  border:none;
+  -webkit-border: none;
+}
+
+
+// Button Primary, Default [Motive hover]// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.btn-default.ct-btn--White{
+  color:#ffffff;
+  border:1px solid #ffffff;
+  &:hover{
+    background:@btn-primary-bg;
+    border-color:@btn-primary-bg;
+    color:#ffffff;
+  }
+}
+.input-lg, .form-group-lg .form-control {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 0;
+}
+
+.btn-group > .btn:hover, .btn-group-vertical > .btn:hover, .btn-group > .btn:focus, .btn-group-vertical > .btn:focus, .btn-group > .btn:active, .btn-group-vertical > .btn:active, .btn-group > .btn.active, .btn-group-vertical > .btn.active {
+  z-index: 0;
+}
+
+
+.btn-transparent{
+  background-color: rgba(255,255,255,0);
+  color: @white-base;
+  border: 1px solid @white-base;
+  &:hover{
+    color:@motive;
+    border-color: @white-base;
+    background-color: @white-base;
+  }
+}
+
+.btn-circle{
+  .ct-m-rounded(@radius: 30px);
+  &.btn-primary,
+  &.btn-success,
+  &.btn-danger,
+  &.btn-warning,
+  &.btn-info,
+  &.btn-gray,
+  &.btn-darkGray{
+    &:before{
+      .ct-m-rounded(@radius: 30px);
+    }
+  }
+}

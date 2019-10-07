@@ -1,0 +1,827 @@
+
+// motive color #d7a2b9
+
+@motive:            #d7a2b9;
+@motive-darker:     darken(@motive, 13.5%);
+@motive-lighten:    lighten(@motive, 12.5%);
+
+// Typography ----------------------------------------------------------------------------------------------------------
+
+a{
+  color: @motive;
+  .ct-m-transition(@type: color, @duration:0.2s, @ease:ease-out);
+  &:hover, &:focus{
+    color: @motive-darker;
+    text-decoration: none;
+  }
+}
+.ct-u-colorMotive{
+  color: @motive;
+}
+
+
+// Menu ----------------------------------------------------------------------------------------------------------------
+
+.navbar-nav{
+  > li{
+    > a{
+      &.active{
+        color: @motive;
+      }
+      &:hover, &:focus{
+        color: @motive;
+      }
+    }
+    &.dropdown{
+      ul.dropdown-menu{
+        li{
+          a.active{
+            color: @motive;
+          }
+        }
+      }
+    }
+  }
+}
+.navbar.yamm{
+  li.dropdown{
+    ul.dropdown-menu{
+      li{
+        a{
+          &:hover{
+            color: @motive;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Footer --------------------------------------------------------------------------------------------------------------
+
+footer{
+  &.ct-footer{
+    .ct-widgetHeader{
+      color: @motive;
+    }
+    .ct-widgetLinks{
+      .ct-widgetLinks-list{
+        li{
+          a{
+            &:hover, &:active, &:focus{
+              color: @motive;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Btn primary ---------------------------------------------------------------------------------------------------------
+
+.btn-primary{
+  background-color: @motive;
+  border-color: @motive;
+  color: @white-base;
+  &:hover, &:focus, &:active{
+    background-color: @motive-darker;
+    border-color: @motive-darker;
+  }
+  &:before{
+    background-color: @motive;
+  }
+}
+
+// back to Top ---------------------------------------------------------------------------------------------------------
+
+#toTop{
+  background-color: @motive;
+  &:hover{
+    background-color: @motive-darker;
+  }
+}
+
+// Tooltip -------------------------------------------------------------------------------------------------------------
+
+.tooltip{
+  &.top{
+    .tooltip-arrow{
+      border-top-color: @motive !important;
+    }
+  }
+  .tooltip-inner{
+    background-color: @motive !important;
+  }
+}
+
+// iconBox -------------------------------------------------------------------------------------------------------------
+
+.ct-iconBox{
+  &.ct-iconBox--type1,
+  &.ct-iconBox--square,
+  &.ct-iconBox--pentagon{
+    .ct-iconBox-content{
+      .ct-iconBox-title{
+        color: @motive;
+      }
+    }
+  }
+  &.ct-iconBox--square{
+    .ct-iconBox-icon{
+      background-color: @motive;
+      border: 2px solid @motive;
+    }
+    &:hover{
+      .ct-iconBox-icon{
+        i{
+          color: @motive;
+        }
+      }
+    }
+  }
+  &.ct-iconBox--rectangle{
+    background-color: @motive;
+    border: 2px solid @motive;
+    &:hover{
+      .ct-iconBox-icon{
+        i{
+          color: @motive;
+        }
+      }
+      .ct-iconBox-content{
+        .ct-iconBox-title{
+          color: @motive;
+        }
+      }
+    }
+  }
+  &.ct-iconBox--pentagon{
+    .ct-iconBox-icon{
+      svg{
+        fill: @motive;
+        stroke: @motive;
+      }
+    }
+    &:hover{
+      i{
+        color: @motive;
+      }
+    }
+  }
+  &.ct-iconBox--type1{
+    .ct-iconBox-Icon{
+      background-color: @motive;
+    }
+    &:hover{
+      .ct-iconBox-Icon,
+      &.ct-iconBox-IconEffect,
+      &.ct-iconBox-effectHelper{
+        &:after{
+          box-shadow: 3px 3px 0 @motive;
+          -webkit-box-shadow: 3px 3px 0 @motive;
+        }
+      }
+    }
+  }
+}
+
+
+// titleBox ------------------------------------------------------------------------------------------------------------
+
+.ct-titleBox{
+  color: @motive;
+}
+
+
+// Tabs ----------------------------------------------------------------------------------------------------------------
+
+.nav{
+  &.nav-tabs,
+  &.ct-navTabas--vertical{
+    li{
+      a{
+        &:active, &:focus, &:hover{
+          color: @motive;
+        }
+      }
+    }
+  }
+}
+
+
+// Gallery Isotope -----------------------------------------------------------------------------------------------------
+
+.ct-gallery-filters{
+  li{
+    a{
+      &.active{
+        color: @motive;
+      }
+    }
+  }
+}
+.ct-galleryBox--motive{
+  .ct-galleryBox-overlay{
+    background-color: rgba(red(@motive), green(@motive), blue(@motive), .7);
+  }
+}
+
+// Shop single product -------------------------------------------------------------------------------------------------
+
+.ct-productDescription{
+  .ct-stars{
+    color: @motive;
+  }
+}
+.ct-productShop{
+  .ct-productShop-content{
+    .ct-productShop-image{
+      .ct-productShop-topDescription{
+        .ct-productShop-wishlist{
+          background-color: rgba(red(@motive), green(@motive), blue(@motive), .7);
+        }
+      }
+    }
+    .ct-productShop-description{
+      .ct-productShop-name{
+        a{
+          &:hover{
+            color: @motive;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Text select ---------------------------------------------------------------------------------------------------------
+
+::-moz-selection {
+  color: @white-base;
+  background: @motive;
+}
+
+::selection {
+  color: @white-base;
+  background: @motive;
+}
+
+
+
+// OWL pagination ------------------------------------------------------------------------------------------------------
+
+.owl-carousel{
+  .owl-controls{
+    .owl-pagination{
+      .owl-page{
+        &.active{
+          span{
+            background-color: @motive;
+          }
+        }
+        span{
+          background-color: rgba(red(@motive), green(@motive), blue(@motive), .5);
+        }
+      }
+    }
+  }
+}
+
+// Social list ---------------------------------------------------------------------------------------------------------
+
+.ct-socialList{
+  li{
+    a.ct-socialLink{
+      span{
+        &:before{
+          color: @motive;
+        }
+      }
+    }
+  }
+}
+
+
+// Page loader ---------------------------------------------------------------------------------------------------------
+
+.ct-loader{
+  .ct-loader-part{
+    background-color: @motive;
+  }
+}
+
+// Courses box ---------------------------------------------------------------------------------------------------------
+
+.ct-coursesBox{
+  .ct-coursesBox-image{
+    .ct-coursesIcon{
+      background-color: @motive;
+    }
+  }
+}
+
+
+// Blog ----------------------------------------------------------------------------------------------------------------
+
+.ct-blogList{
+  .ct-blogList-content{
+    .ct-blogThumbnail{
+      .ct-blogDate{
+        border:2px solid @motive;
+        .ct-blogDay{
+          border-bottom:2px solid @motive;
+        }
+      }
+      .ct-blogImage{
+        border:4px solid @motive;
+      }
+    }
+  }
+}
+
+.ct-blog{
+  .ct-blog-sideBar{
+    .ct-widget-search{
+      input[type=text]{
+        &:focus, &:active, &:valid{
+          + .btn{
+            background-color: @motive;
+            border-color: @motive;
+            color: @motive;
+          }
+        }
+      }
+    }
+    .ct-blogTopPosts,
+    .ct-blog-latestComments{
+      ul{
+        li{
+          a{
+            &:hover, &:focus, &:active {
+              color: @motive;
+            }
+          }
+        }
+      }
+    }
+    .ct-blog-latestComments{
+      a{
+        span.ct-blog-latestComments-tagName{
+          color: @motive;
+          &:hover{
+            color: @motive-darker;
+          }
+        }
+      }
+    }
+    .ct-blog-recentPosts{
+      .ct-widgetInner{
+        .ct-blog-recentPosts-description{
+          .ct-blog-recentPost-shortInformation{
+            .ct-blog-recentPosts-title{
+              &:hover{
+                color: @motive;
+              }
+            }
+          }
+        }
+      }
+    }
+    .ct-blog-tags{
+      a{
+        &:hover{
+          color: @motive;
+          border: 1px solid @motive;
+        }
+      }
+    }
+  }
+}
+
+.ct-blogList{
+  .ct-Description{
+    .ct-readMore{
+      .ct-readMore-link{
+        &:before{
+          border-top: 1px solid @motive;
+        }
+      }
+    }
+  }
+}
+// Google Maps ---------------------------------------------------------------------------------------------------------
+
+.ct-mapBox{
+  background-color: @motive-lighten;
+  &:before{
+    border-color: transparent @motive-lighten transparent transparent;
+  }
+}
+
+// Pricing Box ---------------------------------------------------------------------------------------------------------
+
+.ct-pricingBox{
+  &.ct-pricingBox--standard,
+  &.ct-pricingBox--professional{
+    .ct-pricingBox-list{
+      li{
+        i{
+          color: @motive;
+        }
+      }
+    }
+    &.ct-pricingBox--important {
+      .ct-pricingBox-pricing {
+        background-color: @motive;
+      }
+    }
+  }
+  &.ct-pricingBox--professional{
+    .ct-pricingBox-pricing{
+      background-color: @motive;
+    }
+    &:hover{
+      .ct-pricingBox-title {
+        background-color: @motive;
+        .ct-pricingBox-pricing{
+          border-color: @motive;
+          color: @motive;
+        }
+      }
+    }
+  }
+}
+
+
+// Paginations ---------------------------------------------------------------------------------------------------------
+
+.ct-pagination{
+  .ct-pages{
+    .ct-pages-next,
+    .ct-pages-prev{
+      a{
+        &:hover{
+          color: @motive-darker;
+        }
+      }
+    }
+  }
+}
+
+// Testimonials --------------------------------------------------------------------------------------------------------
+
+.ct-testimonials{
+  .ct-testimonials-content-name{
+    color: @motive;
+  }
+}
+
+
+// Author Comments, posts [Blog single] --------------------------------------------------------------------------------
+
+.ct-authorComment{
+  .ct-authorPost-author{
+    color: @motive;
+  }
+}
+.ct-authorPost{
+  background-color: @motive;
+  &:before{
+    background-color: @motive;
+  }
+}
+
+// Section titles ------------------------------------------------------------------------------------------------------
+
+.ct-sectionTitle{
+  .ct-sectionTitle-decorativeLine--small,
+  .ct-sectionTitle-decorativeLine--medium{
+    &.ct-sectionTitle-decorativeLine--motive{
+      &:after{
+        background-color: @motive;
+      }
+    }
+  }
+}
+
+// Social icons --------------------------------------------------------------------------------------------------------
+
+.ct-socials{
+  &.ct-socials--motive{
+    li{
+      a{
+        i{
+          color: @motive;
+          &:hover, &:active, &:focus{
+            color: @motive;
+          }
+        }
+      }
+    }
+  }
+  &.ct-socials--lightGrey{
+    li{
+      a{
+        i{
+          &:hover, &:active, &:focus{
+            color: @motive;
+          }
+        }
+      }
+    }
+  }
+  &.ct-socials--darkGrey{
+    li{
+      a{
+        i{
+          &:hover, &:active, &:focus{
+            color: @motive;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Synced Carousel -----------------------------------------------------------------------------------------------------
+
+.ct-syncedCarousel{
+  &.ct-syncedCarousel--navigationBottom{
+    .owl-item{
+      &.synced{
+        border: 2px solid @motive;
+      }
+    }
+  }
+  .ct-syncedCarousel-videoPoster{
+    figcaption{
+      background-color: rgba(red(@motive), green(@motive), blue(@motive), .7);
+    }
+  }
+}
+
+
+// Nav tabs ----------------------------------------------------------------------------------------------------------------
+.nav.nav-tabs.ct-navTabs--vertical{
+  li{
+    &.active{
+      a{
+        color: @motive;
+      }
+    }
+  }
+  @media (max-width: @screen-md){
+    li{
+      &.active{
+        a{
+          background-color: @motive;
+          &:before{
+            border-color: @motive transparent transparent transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ct-tabpanel{
+  &.ct-tabpanel--motive{
+    .nav-tabs{
+      li{
+        a{
+          background-color: @motive;
+          &:hover, &:active, &:focus{
+            background-color: @motive-darker;
+          }
+        }
+      }
+    }
+  }
+}
+// icon Boxes ----------------------------------------------------------------------------------------------------------
+
+.ct-iconBox{
+  //pentagon
+  &.ct-iconBox--pentagon{
+    &:hover{
+      .ct-iconBox-icon{
+        i{
+          color: @motive;
+        }
+      }
+    }
+  }
+}
+
+
+// Person Boxes --------------------------------------------------------------------------------------------------------
+
+.ct-personBox{
+  &.ct-personBox--primary{
+    .ct-personBox-image{
+      figcaption{
+        &:before{
+          background-color: rgba(red(@motive), green(@motive), blue(@motive), .7);
+        }
+        .ct-personBox-name{
+          background-color: rgba(red(@motive), green(@motive), blue(@motive), .7);
+        }
+      }
+    }
+  }
+}
+
+html.ie8{
+  .ct-personBox{
+    &.ct-personBox--primary{
+      .ct-personBox-image{
+        figcaption{
+          .ct-personBox-name{
+            background-color: @motive; // IE8 support
+          }
+        }
+      }
+    }
+  }
+}
+
+// Magnific popup ------------------------------------------------------------------------------------------------------
+
+.mfp-arrow-left:before,
+.mfp-arrow-left .mfp-b{
+  border-right: 27px solid @motive;
+}
+.mfp-arrow-right:before,
+.mfp-arrow-right .mfp-b{
+  border-left: 27px solid @motive;
+}
+
+// Date picker ---------------------------------------------------------------------------------------------------------
+
+.datepicker table tr td.today,
+.datepicker table tr td.today:hover,
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:hover {
+  background-color: @motive;
+  background-image: -moz-linear-gradient(top, @motive, @motive);
+  background-image: -ms-linear-gradient(top, @motive, @motive);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@motive), to(@motive));
+  background-image: -webkit-linear-gradient(top, @motive,@motive);
+  background-image: -o-linear-gradient(top, @motive, @motive);
+  background-image: linear-gradient(top, @motive, @motive);
+  -moz-box-shadow:    inset 0 0 10px @motive-darker;
+  -webkit-box-shadow: inset 0 0 10px @motive-darker;
+  box-shadow:         inset 0 0 10px @motive-darker;
+  border-left: 1px solid @motive-darker;
+  border-top: 1px solid @motive-darker;
+}
+
+.datepicker table tr td.range.today,
+.datepicker table tr td.range.today:hover,
+.datepicker table tr td.range.today.disabled,
+.datepicker table tr td.range.today.disabled:hover {
+  background-color: @motive;
+  background-image: -moz-linear-gradient(top, @motive, @motive);
+  background-image: -ms-linear-gradient(top, @motive, @motive);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@motive), to(@motive));
+  background-image: -webkit-linear-gradient(top, @motive,@motive);
+  background-image: -o-linear-gradient(top, @motive, @motive);
+  background-image: linear-gradient(top, @motive, @motive);
+}
+
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active:hover:hover,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active.disabled:hover:hover,
+.datepicker table tr td.active:active,
+.datepicker table tr td.active:hover:active,
+.datepicker table tr td.active.disabled:active,
+.datepicker table tr td.active.disabled:hover:active,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active:hover.active,
+.datepicker table tr td.active.disabled.active,
+.datepicker table tr td.active.disabled:hover.active,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active:hover.disabled,
+.datepicker table tr td.active.disabled.disabled,
+.datepicker table tr td.active.disabled:hover.disabled,
+.datepicker table tr td.active[disabled],
+.datepicker table tr td.active:hover[disabled],
+.datepicker table tr td.active.disabled[disabled],
+.datepicker table tr td.active.disabled:hover[disabled] {
+  background-color: @motive;
+  background-image: -moz-linear-gradient(top, @motive, @motive);
+  background-image: -ms-linear-gradient(top, @motive, @motive);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@motive), to(@motive));
+  background-image: -webkit-linear-gradient(top, @motive,@motive);
+  background-image: -o-linear-gradient(top, @motive, @motive);
+  background-image: linear-gradient(top, @motive, @motive);
+  -moz-box-shadow:    inset 0 0 10px @motive-darker;
+  -webkit-box-shadow: inset 0 0 10px @motive-darker;
+  box-shadow:         inset 0 0 10px @motive-darker;
+  border-left: 1px solid @motive-darker;
+  border-top: 1px solid @motive-darker;
+}
+
+.datepicker table tr td.selected:active,
+.datepicker table tr td.selected:hover:active,
+.datepicker table tr td.selected.disabled:active,
+.datepicker table tr td.selected.disabled:hover:active,
+.datepicker table tr td.selected.active,
+.datepicker table tr td.selected:hover.active,
+.datepicker table tr td.selected.disabled.active,
+.datepicker table tr td.selected.disabled:hover.active {
+  background: @motive;
+}
+.datepicker table tr td.active{
+  background: @motive;
+}
+
+// Select 2 ------------------------------------------------------------------------------------------------------------
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: rgba(red(@motive), green(@motive), blue(@motive), .1);
+}
+
+
+// Forms [bootstrap] ---------------------------------------------------------------------------------------------------
+
+.form-control{
+  &:focus, &:active{
+    .ct-m-bordered(@top-color: @motive, @right-color: @motive, @bottom-color: @motive, @left-color: @motive);
+  }
+}
+
+// Progress bars -------------------------------------------------------------------------------------------------------
+
+.ct-progressBar{
+  .progress{
+    .progress-bar{
+      &.progress-bar--motive{
+        background-color: @motive;
+      }
+      .ct-progressBar-content{
+        background-color: @motive;
+      }
+    }
+  }
+}
+
+// Counters ------------------------------------------------------------------------------------------------------------
+
+.ct-counterBox-icon{
+  .ct-counter-icon{
+    background-color: @motive;
+  }
+  .ct-counter-content{
+    .ct-counter-description{
+      color: @motive;
+    }
+  }
+}
+.ct-counterBox{
+  .ct-counter-content{
+    .ct-counter-description{
+      color: @motive;
+    }
+  }
+}
+
+// Accordions ----------------------------------------------------------------------------------------------------------
+
+.panel-group{
+  .panel-heading{
+    a{
+      &:before{
+        background-color: @motive;
+      }
+    }
+  }
+}
+
+
+// Tables --------------------------------------------------------------------------------------------------------------
+
+table{
+  &.table{
+    > thead{
+      background-color: @motive;
+    }
+  }
+}
+
+
+// Image Box -----------------------------------------------------------------------------------------------------------
+
+.ct-imageBox{
+  &.ct-imageBox--type1{
+    .ct-imageBox-content{
+      &:before{
+        background-color: rgb(red(@motive), green(@motive), blue(@motive));
+        background-color: rgba(red(@motive), green(@motive), blue(@motive), .9);
+      }
+    }
+  }
+}

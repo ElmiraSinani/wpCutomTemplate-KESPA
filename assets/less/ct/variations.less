@@ -1,0 +1,402 @@
+/*-----------------------
+
+1. Main Carousel
+2. Person Carousel
+
+-----------------------*/
+
+
+
+
+
+
+
+
+// 1. Main Carousel /---------------------------------------------------------------------------------------------------
+
+.ct-mainCarousel.ct-mainCarousel--arrowsMiddle,
+.ct-mainCarousel.ct-mainCarousel--arrowsTop,
+.ct-mainCarousel.ct-mainCarousel--arrowsTopRight,
+.ct-mainCarousel.ct-mainCarousel--arrowsTopLeft,
+.ct-mainCarousel.ct-mainCarousel--arrowsBottom,
+.ct-mainCarousel.ct-mainCarousel--arrowsBottomLeft,
+.ct-mainCarousel.ct-mainCarousel--arrowsBottomRight,
+.ct-mainCarousel.ct-mainCarousel--arrowsCenterTop,
+.ct-mainCarousel.ct-mainCarousel--arrowsCenterBottom{
+  .owl-controls{
+    opacity:1;
+    margin:0;
+    position: absolute;
+    width:100%;
+    left:0;
+    pointer-events: none;
+    .owl-buttons{
+      clear:both;
+      pointer-events: auto;
+    }
+  }
+}
+.ct-mainCarousel{
+  .owl-controls{
+    .owl-prev{
+      float:left;
+      left:10px;
+      position:relative;
+    }
+    .owl-next{
+      float:right;
+      right:10px;
+      position:relative;
+    }
+  }
+  &.ct-mainCarousel--arrowsMiddle{
+    .owl-controls{
+      top:45%;
+    }
+  }
+  &.ct-mainCarousel--arrowsTop{
+    .owl-controls{
+      top:15%;
+    }
+  }
+  &.ct-mainCarousel--arrowsTopRight,
+  &.ct-mainCarousel--arrowsTopLeft{
+    .owl-controls{
+      top:15%;
+      .owl-buttons{
+        .owl-prev{
+          float:none;
+          margin-right:45px;
+        }
+        .owl-next{
+          float:none;
+        }
+      }
+    }
+  }
+  &.ct-mainCarousel--arrowsTopRight{
+    .owl-controls{
+      .owl-buttons{
+        float:right;
+      }
+    }
+  }
+  &.ct-mainCarousel--arrowsTopLeft{
+    .owl-controls{
+      .owl-buttons{
+        float:left;
+      }
+    }
+  }
+  &.ct-mainCarousel--arrowsBottom{
+    .owl-controls{
+      bottom:1%;
+    }
+  }
+  &.ct-mainCarousel--arrowsBottomRight,
+  &.ct-mainCarousel--arrowsBottomLeft{
+    .owl-controls{
+      bottom:1%;
+      .owl-buttons{
+        .owl-prev{
+          float:none;
+          margin-right:45px;
+        }
+        .owl-next{
+          float:none;
+        }
+      }
+    }
+  }
+  &.ct-mainCarousel--arrowsBottomRight{
+    .owl-controls{
+      .owl-buttons{
+        float:right;
+      }
+    }
+  }
+  &.ct-mainCarousel--arrowsBottomLeft{
+    .owl-controls{
+      .owl-buttons{
+        float:left;
+      }
+    }
+  }
+  &.ct-mainCarousel--arrowsCenterTop,
+  &.ct-mainCarousel--arrowsCenterBottom{
+    .owl-controls{
+      .owl-buttons{
+        float:none;
+        text-align:center;
+      }
+    }
+  }
+  &.ct-mainCarousel--arrowsCenterTop{
+    .owl-controls{
+      top:15%;
+      .owl-buttons{
+        .owl-prev{
+          float:none;
+          margin-right:45px;
+        }
+        .owl-next{
+          float:none;
+        }
+      }
+    }
+  }
+  &.ct-mainCarousel--arrowsCenterBottom{
+    .owl-controls{
+      bottom:15%;
+      .owl-buttons{
+        .owl-prev{
+          float:none;
+          margin-right:45px;
+        }
+        .owl-next{
+          float:none;
+        }
+      }
+    }
+  }
+}
+
+
+// 2. Person Carousel //------------------------------------------------------------------------------------------------
+
+
+.ct-personCarousel{
+  &.ct-personCarousel--arrowsTopRight{
+    .owl-controls{
+      top: -90px;
+      .owl-buttons{
+        float: right;
+        clear: both;
+        .owl-prev{
+          float: none;
+          margin-right: 10px;
+        }
+        .owl-next{
+          float: none;
+          margin-right: 14px;
+        }
+      }
+    }
+  }
+  &.ct-personCarousel--arrowsBottomRight{
+    .owl-controls{
+      bottom: -80px;
+      .owl-buttons{
+        float: right;
+        clear: both;
+        .owl-prev{
+          float: none;
+          margin-right: 10px;
+        }
+        .owl-next{
+          float: none;
+          margin-right: 14px;
+        }
+      }
+    }
+  }
+  &.ct-personCarousel--arrowsTopMiddle{
+    .owl-controls{
+      top: -80px;
+      .owl-buttons{
+        float: none;
+        clear: both;
+        .owl-prev{
+          float: none;
+          margin-right: 10px;
+        }
+        .owl-next{
+          float: none;
+          margin-right: 14px;
+        }
+      }
+    }
+  }
+  &.ct-personCarousel--arrowsBottomMiddle{
+    .owl-controls{
+      bottom: -80px;
+      .owl-buttons{
+        float: none;
+        clear: both;
+        .owl-prev{
+          float: none;
+          margin-right: 10px;
+        }
+        .owl-next{
+          float: none;
+          margin-right: 14px;
+        }
+      }
+    }
+  }
+}
+
+/*Decoration Carousel*/
+
+.ct-decorationCarousel{
+  &.ct-decorationCarousel--navBottomCenter,
+  &.ct-decorationCarousel--navBottomLeft,
+  &.ct-decorationCarousel--navBottomRight{
+    .owl-controls{
+      .owl-pagination{
+        bottom:0;}
+    }
+  }
+  &.ct-decorationCarousel--navBottomCenter{
+    .owl-controls{
+      .owl-pagination{
+        left:50%;
+        -webkit-transform: translate(-50%);
+        transform: translate(-50%);
+      }
+    }
+  }
+  &.ct-decorationCarousel--navBottomRight{
+    .owl-controls{
+      .owl-pagination{
+        right:0;
+      }
+    }
+  }
+  &.ct-decorationCarousel--navBottomLeft{
+    .owl-controls{
+      .owl-pagination{
+        left:0;
+      }
+    }
+  }
+  &.ct-decorationCarousel--navTopCenter,
+  &.ct-decorationCarousel--navTopLeft,
+  &.ct-decorationCarousel--navTopRight{
+    .owl-controls{
+      .owl-pagination{
+        top:0;
+      }
+    }
+  }
+  &.ct-decorationCarousel--navTopCenter{
+    .owl-controls{
+      .owl-pagination{
+        left:50%;
+        transform: translate(-50%);
+        -webkit-transform: translate(-50%);
+      }
+    }
+  }
+  &.ct-decorationCarousel--navTopRight{
+    .owl-controls{
+      .owl-pagination{
+        right:0;
+      }
+    }
+  }
+  &.ct-decorationCarousel--navTopLeft{
+    .owl-controls{
+      .owl-pagination{
+        left:0;
+      }
+    }
+  }
+}
+
+// Carousel nav
+
+.ct-carouselNavigation--arrowsTopRight,
+.ct-carouselNavigation--arrowsTopLeft,
+.ct-carouselNavigation--arrowsTopCenter,
+.ct-carouselNavigation--arrowsBottomRight,
+.ct-carouselNavigation--arrowsBottomLeft,
+.ct-carouselNavigation--arrowsBottomCenter{
+  .owl-controls{
+    .owl-buttons{
+      position: absolute;
+      .owl-prev,
+      .owl-next{
+        width: 12px;
+        height:25px;
+        background-repeat: no-repeat;
+      }
+      .owl-prev{
+        background-image: url("../../../assets/images/content/leftArrow-personCarousel.png");
+        margin-right: 5px;
+      }
+      .owl-next{
+        background-image: url("../../../assets/images/content/rightArrow-personCarousel.png");
+        margin-left: 5px;
+      }
+    }
+  }
+}
+.ct-carouselNavigation--arrowsTopRight,
+.ct-carouselNavigation--arrowsTopLeft,
+.ct-carouselNavigation--arrowsTopCenter{
+  .owl-controls{
+    .owl-buttons{
+      top: -75px;
+    }
+  }
+}
+.ct-carouselNavigation--arrowsBottomRight,
+.ct-carouselNavigation--arrowsBottomLeft,
+.ct-carouselNavigation--arrowsBottomCenter{
+  .owl-controls{
+    .owl-buttons{
+      bottom: -75px;
+    }
+  }
+}
+.ct-carouselNavigation--arrowsTopRight,
+.ct-carouselNavigation--arrowsBottomRight{
+  .owl-controls{
+    .owl-buttons{
+      right: 0;
+    }
+  }
+}
+.ct-carouselNavigation--arrowsTopLeft,
+.ct-carouselNavigation--arrowsBottomLeft{
+  .owl-controls{
+    .owl-buttons{
+      left: 0;
+    }
+  }
+}
+.ct-carouselNavigation--arrowsTopCenter,
+.ct-carouselNavigation--arrowsBottomCenter{
+  .owl-controls{
+    .owl-buttons{
+      left: 50%;
+      .ct-m-transform(@translate:translateX(-50%));
+    }
+  }
+}
+.ct-carouselNavigation--arrowsLight{
+  .owl-controls{
+    .owl-buttons{
+      position: absolute;
+      .owl-prev,
+      .owl-next{
+        width: 12px;
+        height:25px;
+        background-repeat: no-repeat;
+      }
+      .owl-prev{
+        background-image: url("../../../assets/images/content/carousel-nav-arrowLeft-light.png");
+        margin-right: 5px;
+      }
+      .owl-next{
+        background-image: url("../../../assets/images/content/carousel-nav-arrowRight-light.png");
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+
+
+
